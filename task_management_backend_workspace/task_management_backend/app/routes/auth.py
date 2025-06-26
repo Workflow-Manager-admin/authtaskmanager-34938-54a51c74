@@ -18,17 +18,17 @@ blp = Blueprint(
 
 
 class UserRegisterSchema(Schema):
-    username = fields.String(required=True, description="Username")
-    password = fields.String(required=True, description="Password")
+    username = fields.String(required=True)
+    password = fields.String(required=True)
 
 
 class UserLoginSchema(Schema):
-    username = fields.String(required=True, description="Username")
-    password = fields.String(required=True, description="Password")
+    username = fields.String(required=True)
+    password = fields.String(required=True)
 
 
 class TokenResponseSchema(Schema):
-    access_token = fields.String(description="JWT access token")
+    access_token = fields.String()
 
 
 def token_required(f):
